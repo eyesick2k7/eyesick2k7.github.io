@@ -3,101 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stack Calculator</title>
-    <style>
-        /* Centering the entire content */
-        body {
-            font-family: 'Courier New', monospace;
-            background-color: #282c34;
-            color: #fff;
-            text-align: center;
-            padding: 50px;
-        }
-        
-        /* Styling for the terminal-like area */
-        .output {
-            font-size: 20px;
-            padding: 20px;
-            background-color: #444;
-            margin-top: 20px;
-            border-radius: 10px;
-            min-height: 60px;
-        }
-        
-        .input-container {
-            margin-top: 30px;
-        }
-
-        input[type="text"] {
-            font-size: 18px;
-            padding: 10px;
-            width: 200px;
-            text-align: center;
-            margin: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            background-color: #222;
-            color: #fff;
-        }
-        
-        input[type="text"]:focus {
-            outline: none;
-            border-color: #3b82f6;
-        }
-    </style>
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
-
-    <h1>Welcome to the Stack Calculator</h1>
-    <p>Type the number of blocks you have below to calculate your stacks & the remaining number of blocks</p>
-
-    <div class="output" id="output">
-        <p>0 stacks & 0 blocks</p>
+    <div class="home-container">
+        <h1>Welcome to my projects</h1>
+        <div class="button-container">
+            <a href="Phasmo Ghost Descriptions/phasmo.html" class="button">Phasmo Ghost Descriptions</a>
+            <a href="MC Stack Calculator/MC Stack Calc.html" class="button">MC Stack Calculator</a>
+            <a href="index.html" class="button">Calculator (unavailable)</a>
+        </div>
     </div>
-
-    <div class="input-container">
-        <input type="text" id="userInput" autofocus placeholder="Enter a number..." />
-    </div>
-
-    <script>
-        // Function to calculate the number of stacks and blocks
-        function howManyStacks(int) {
-            let num = parseInt(int, 10);
-            let fullStacks = Math.floor(num / 64);
-            let leftOver = num % 64;
-
-            let result = `${fullStacks} Stack${fullStacks !== 1 ? 's' : ''}`;
-            if (leftOver != 0) result += ` & ${leftOver} Block${leftOver !== 1 ? 's' : ''}`;
-            
-            return result;
-        }
-
-        // Function to update the output section with the new result
-        function updateOutput(message) {
-            const output = document.getElementById('output');
-            output.innerHTML = `<p>${message}</p>`;
-        }
-
-        // Function to handle user input
-        function handleUserInput(event) {
-            const inputField = document.getElementById('userInput');
-            const userInput = inputField.value.trim();
-
-            if (event.key === 'Enter') {
-                if (isNaN(userInput) || userInput === '') {
-                    updateOutput('Please enter a valid number.');
-                } else {
-                    updateOutput(howManyStacks(userInput));
-                }
-
-                inputField.value = '';  // Clear the input field after submission
-            }
-        }
-
-        // Attach the event listener to handle Enter key press
-        const inputField = document.getElementById('userInput');
-        inputField.addEventListener('keypress', handleUserInput);
-    </script>
-
 </body>
 </html>

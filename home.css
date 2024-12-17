@@ -1,0 +1,49 @@
+/* Reset and general styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding: 79px;
+}
+
+#container {
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Style for the button container */
+#button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between buttons */
+    align-items: center;
+}
+
+/* Style for the buttons */
+.button {
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem;
+}
+
+.button:hover {
+    background-color: #666;
+    transform: scale(1.05); /* Slight zoom effect */
+    border-color: #3b82f6; /* Accent border on hover */
+}

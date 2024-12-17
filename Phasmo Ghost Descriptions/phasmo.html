@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Properties Lookup</title>
+    <link rel="stylesheet" href="phasmo.css">
+</head>
+<body>
+    <!-- Added wrapper div for the background blur -->
+    <div id="background-wrapper">
+        <h1>Phasmophobia Ghost Properties</h1>
+
+        <div class="output" id="output">
+            <p>Choose a ghost to see its properties</p>
+        </div>
+
+        <input type="text" id="ghostSearch" placeholder="Enter a ghost manually..." class="input-container">
+
+        <div id="button-container">
+            <button id="listGhostsButton">Or click here for a list of the Ghosts</button>
+        </div>
+    </div>
+    <div id="ghostNamesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ghost Names</h2>
+            <ul id="ghostNamesList"></ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>
