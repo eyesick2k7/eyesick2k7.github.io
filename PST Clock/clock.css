@@ -1,0 +1,47 @@
+body {
+    background-image: url('crater lake.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #050505;
+    color: white;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
+
+.back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem;
+}
+.back:hover {
+    background-color: #666;
+    transform: scale(1.05);
+    border-color: #3b82f6;
+}
+
+#clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+#clock {
+    font-family: monospace;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    background-color: rgb(97, 97, 97, 0.1);
+    width: 100%;
+}

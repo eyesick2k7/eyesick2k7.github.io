@@ -1,0 +1,71 @@
+/* Centering the entire content */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem;
+}
+.back:hover {
+    background-color: #666;
+    transform: scale(1.05);
+    border-color: #3b82f6;
+}
+
+/* Styling for the terminal-like area */
+.output {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    max-width: 450px;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.6rem;
+}
+
+.input-container {
+    margin-top: 30px;
+}
+
+input[type="text"] {
+    font-size: 18px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #222;
+    color: #fff;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+}

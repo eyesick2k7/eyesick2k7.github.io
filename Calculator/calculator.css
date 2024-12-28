@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem;
+}
+.back:hover {
+    background-color: #666;
+    transform: scale(1.05);
+    border-color: #3b82f6;
+}
+
+#calculator {
+    font-family: 'Courier New', monospace;
+    background-color: hsl(0, 0%, 12%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+button:active {
+    background-color: hsl(0, 0%, 20%);
+}
+#paddingBtn {
+    background-color: transparent;
+}
+.textBtn {
+    font-family: monospace;
+    font-size: 2rem;
+}
+.operator-btn {
+    background-color: hsl(35, 100%, 45%);
+}
+.operator-btn:hover {
+    background-color: hsl(35, 100%, 55%);
+}
+.operator-btn:active {
+    background-color: hsl(35, 100%, 35%);
+}

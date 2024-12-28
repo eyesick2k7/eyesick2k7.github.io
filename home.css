@@ -1,20 +1,19 @@
-/* Reset and general styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #111;
     color: white;
     font-family: 'Courier New', monospace;
     text-align: center;
     padding: 79px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
 }
 
-#container {
-    padding: 20px;
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 h1 {
@@ -23,10 +22,10 @@ h1 {
 }
 
 /* Style for the button container */
-#button-container {
+.button-container {
     display: flex;
-    flex-direction: column;
-    gap: 15px; /* Spacing between buttons */
+    flex-wrap: wrap;
+    gap: 15px;
     align-items: center;
 }
 
@@ -41,9 +40,14 @@ h1 {
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-size: 1.1rem;
 }
-
 .button:hover {
     background-color: #666;
     transform: scale(1.05); /* Slight zoom effect */
     border-color: #3b82f6; /* Accent border on hover */
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
 }
