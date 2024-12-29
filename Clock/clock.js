@@ -1,11 +1,3 @@
-function updateClock() {
-    const now = new Date();
-    const time = now.toLocaleTimeString();
-    const timeString = `${time}`;
-
-    document.getElementById("clock").textContent = timeString;
-}
-
-setInterval(updateClock, 1000);
-
-updateClock();
+const clock = document.getElementById('clock');
+clock.textContent = new Date().toLocaleTimeString();
+setInterval(() => clock.textContent = new Date().toLocaleTimeString(), 1000);
